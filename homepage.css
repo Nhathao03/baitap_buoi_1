@@ -1,0 +1,157 @@
+body {
+    background-color: rgb(184, 219, 246);
+    font-family: arial;
+    margin-top: 0 auto;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    max-width: 1800px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    background-color: #fff;
+    color: rgb(13, 45, 99);
+    text-align: center;
+    padding: 10px;
+    grid-column: 1 / span 2;
+}
+
+#menu {
+    background-color: rgb(13, 45, 99);
+    padding: 10px;
+    grid-column: 1 / span 2;
+}
+
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    display: inline-block;
+    padding: 10px;
+
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu ul li.right {
+    float: right;
+}
+
+/*noi dung*/
+.noi-dung-left {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    grid-column: 1;
+    position: relative;
+    width: 100%;
+    height: 99%;
+    overflow: hidden;
+}
+
+.left-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.left-item > p{
+    text-align: left;
+}
+
+.left-item > img {
+    max-width: 100%;;
+    height: auto;
+    
+    transition: transform 0.5s ease;
+}
+
+.left-item:hover img {
+    transform: scale(1.1);
+}
+
+.noi-dung-left>iframe {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 99%;
+    height: 99%;
+    border-radius: 5px;
+    border: none;
+}
+
+.noi-dung-right > .introduce{
+    border-radius: 5px;
+
+}
+
+.noi-dung-right > .introduce > iframe {
+    padding: 10px;
+}
+
+.noi-dung-right {
+    background-color: rgb(184, 219, 246);
+    color: #000000;
+    padding: 0px;
+    padding-right: 10px;
+    grid-column: 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    grid-column: 1 / span 2;
+    display: grid;
+}
+
+.noi-dung-right .fl-me {
+    height: 130px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.noi-dung-right > .introduce{
+    background-color: #ffffff;
+}
+
+@media(max-width:576px) {
+    .noi-dung-left {
+        grid-template-columns: 1fr;
+    }
+
+    .left-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .noi-dung-right {
+        grid-column: 1 / span 2;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
